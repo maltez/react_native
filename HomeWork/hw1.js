@@ -1,20 +1,18 @@
+const s_property = Symbol("property");
+const s_method = Symbol("method");
 
-let myProp = Symbol('symbProp');
-
-class myClass {
-    constructor(value) {
-        this[myProp] = value;
+class HomeWork1 {
+    constructor(property) {
+        this[s_property] = property;
     }
-
-    get propValue() {
-        return this[myProp];
+    [s_method]() {
+        console.log(`Home Work has a private property called '${this[s_property]}'`);
     }
-    set propValue(value) {
-        this[myProp] = value;
+    run() {
+        this[s_method]();
+        console.log("Also it has a method using Symbol!");
     }
-  }
+}
 
-let a = new myClass(2);
-console.log(a.propValue);
-a.propValue = 5;
-console.log(a.propValue);
+let hw1 = new HomeWork1("new property");
+hw1.run();
