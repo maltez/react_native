@@ -1,5 +1,3 @@
-"use strict"
-
 const sym = Symbol("sym");
 
 class HomeWork {
