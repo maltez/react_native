@@ -1,4 +1,4 @@
-//Task 1 #############################
+console.log("Task 1 #############################");
 let Car = (function () {
     let privateProperties = new WeakMap();
   
@@ -28,7 +28,7 @@ let Car = (function () {
   myCar.changeCarColor("Black");
   myCar.showCar();
 
-  //Task 2 #############################
+  console.log("Task 2 #############################");
 
   class FibonacciNumbers {
     constructor(num) {
@@ -45,7 +45,6 @@ let Car = (function () {
                 a = b;
                 b = c;
                 value = b;
-                //console.log("this.num = " + num);
                 return {
                     value, done: b >= num
                 };
@@ -59,3 +58,28 @@ const fib = new FibonacciNumbers(7);
 for (let i of fib) {
     console.log(i);
 }
+
+console.log("Task 3 #####################################");
+
+function* fibo() {
+    var current = 1; 
+    var a = 1, b = 1;
+  
+    yield 1;
+  
+    while (true) {
+      current = b;
+  
+      yield current;
+  
+      b = a + b;
+      a = current;
+    }
+  }
+  
+  sequence = fibo();
+  let n = 5;
+  for (let i = 1; i<n; i++) {
+    console.log(sequence.next().value);
+  }
+ 
