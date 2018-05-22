@@ -1,60 +1,50 @@
-function sayHelloWithDelay(msg, delay) {
-    return new Promise((res, rej) => {
-        if( delay > 7) {
-            return rej(new RangeError('Out of time range'));
+function sleep (msg, delay){
+    return new Promise((resolve, reject)=>{
+        if(delay > 7) {
+            return new RangeError('Its too long')
+            //return reject('Its too long');
         }
-        setTimeout(() => {
-            return res(msg);
+        setTimeout(()=> {
+            return resolve(msg);
         }, delay * 1000);
     });
 }
 
-sayHelloWithDelay('Hello', 0.5)
-    .then((data) => {
-       console.log(data);
-       return sayHelloWithDelay('World', 0.5);
+Promise.race([sleep('Hi', 8), sleep('Hello', 0.8), sleep('Bye', 0.3)])
+.then((data) => {
+    console.log(data);
+})
+.catch((err) => {
+    console.log(err.message)
+});
+
+Promise.resolve('data123')
+    .then(data => {
+        console.log(data)
     })
+
+Promise.all([sleep('Hi', 0.7), sleep('Hello', 8), sleep('Bye', 0.3)])
     .then((data) => {
         console.log(data);
-        return sayHelloWithDelay('Suckers!', 10);
     })
     .catch((err) => {
-        return err.message;
-    })
+        console.log(err.message)
+    });
+
+
+sleep('Hello', 1)
     .then((data) => {
         console.log(data);
-        console.log('Goodbye');
+        return sleep('Hi', 2);
     })
-
-    Promise.resolve('Goodbye')
-    .then((data) => {
-        console.log(`This is say by promise ${data}`);
+    .then((data)=> {
+        console.log(data);
     })
-
-    Promise.reject('Crash')
     .catch((err) => {
-        console.log(`This is say by promise ${err}`);
-    });
-
-    Promise.all([
-        sayHelloWithDelay('World', 0.5),
-        sayHelloWithDelay('Me', 1),
-        sayHelloWithDelay('You', 1.5),
-        sayHelloWithDelay('We', 0.75),
-    ])
-    .then((data) => {
-        data.forEach(data => {
-            console.log(data);
-        })
+        console.log(err.message);
+        return 'Promise rejected';
     })
-
-    Promise.race([
-        sayHelloWithDelay('World', 0.5),
-        sayHelloWithDelay('Me', 1),
-        sayHelloWithDelay('You', 1.5),
-        sayHelloWithDelay('We', 0.75),
-    ])
     .then((data) => {
         console.log(data);
-    });
+    })
     
