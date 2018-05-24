@@ -16,3 +16,4 @@ class HomeWork1 {
 
 let hw1 = new HomeWork1("new property");
 hw1.run();
+console.log(hw1[s_property]);//?
