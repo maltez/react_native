@@ -61,7 +61,7 @@ for (let i of fib) {
 
 console.log("Task 3 #####################################");
 
-function* fibo() {
+function* fibo(num) {
     var current = 1; 
     var a = 1, b = 1;
   
@@ -69,7 +69,7 @@ function* fibo() {
   
     while (true) {
       current = b;
-  
+      if (current > num) return current; 
       yield current;
   
       b = a + b;
@@ -77,9 +77,9 @@ function* fibo() {
     }
   }
   
-  sequence = fibo();
+  sequence = fibo(7);
   let n = 5;
-  for (let i = 1; i<n; i++) {
-    console.log(sequence.next().value);
+  for (let val of sequence) {
+    console.log(val); // 1
   }
  
