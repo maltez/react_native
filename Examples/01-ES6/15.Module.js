@@ -1,25 +1,15 @@
-const Module = (function(){
-    const publicField = 2.7;
-    const privateField = 'Top secret';
-
-    const privateFunction = () => {
-        console.log('This is private function');
-    }
-
-    const publicFunction = () => {
-        console.log('This is the public');
-        console.log('I invoke private function');
-        privateFunction();
-        console.log('I use private field');
-        console.log(privateField);
-    }
-
+const Module =  (function() {
+    const fn1 = function() {};
+    const fn2 = function() {
+        fn1();
+    };
+    const PI = 3.14;
 
     return {
-        publicField,
-        publicFunction
+        fn2,
+        PI
     }
-})();
+})()
 
-const { publicField, publicFunction} = Module;
-publicFunction();
+
+const {fn2, PI} = Module;
