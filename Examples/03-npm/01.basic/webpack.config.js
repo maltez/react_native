@@ -1,8 +1,7 @@
 var path = require('path');
-var {optimize: { UglifyJsPlugin }} = require('webpack');
 
 module.exports = {
-    entry: path.join(__dirname, 'src/init.js'),
+    entry: path.join(__dirname, './src/index.js'),
 
     output:{
         filename: 'bundle.js',
@@ -12,5 +11,6 @@ module.exports = {
     resolve: {
         extensions: ['.js']
     },
-    plugins: [new UglifyJsPlugin()],
+    mode: "none",
+    //watch: true
 };

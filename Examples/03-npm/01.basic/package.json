@@ -1,0 +1,21 @@
+{
+  "name": "my-awesome-module",
+  "version": "0.0.1",
+  "description": "I do all awesome",
+  "main": "app.js",
+  "scripts": {
+    "prebuild": "rm -rf build",
+    "build": "./node_modules/.bin/webpack",
+    "postbuild": "echo everything goes right!",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-status-code": "^2.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
+  }
+}

@@ -1,5 +1,5 @@
 var path = require('path');
-var webpack =require('webpack');
+var { DefinePlugin } =require('webpack');
 
 module.exports = {
     entry: path.join(__dirname, 'src/init.js'),
@@ -13,7 +13,7 @@ module.exports = {
         extensions: ['.js']
     },
     plugins:[
-        new webpack.DefinePlugin({
+        new DefinePlugin({
             ENV: 'dev',
             version: JSON.stringify('5f73a'),
             BROWSER_SUPPORT_HTML5: false,
