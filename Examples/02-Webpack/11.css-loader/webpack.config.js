@@ -14,15 +14,14 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.css']
     },
-    devServer:{
-        inline: true,
-        hot: true
-    },
     module:{
-        loaders:[
+        rules:[
             {
-                test: /\.css$/,
-                loaders: ['style-loader', 'css-loader'],
+                test:/\.css$/,
+                use: [
+                { loader: 'style-loader' },
+                { loader: 'css-loader'}
+            ]
             }
         ]
     }

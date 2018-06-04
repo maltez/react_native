@@ -12,11 +12,14 @@ module.exports = {
         extensions: ['.js']
     },
     module:{
-        loaders:[
+        rules:[
             {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: [ /node_modules/, /build/ ]
+                test:/\.js$/,
+                use: [
+                    { 
+                        loader: 'babel-loader'
+                    }
+                ]
             }
         ]
     }

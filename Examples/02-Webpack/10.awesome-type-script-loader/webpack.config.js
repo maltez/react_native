@@ -7,19 +7,22 @@ module.exports = {
         filename: 'bundle.js',
         path: path.join(__dirname, 'build')
     },
-
     resolve: {
         extensions: ['.js', '.ts']
     },
+    mode: 'none',
 
     module:{
-        loaders:[
+        rules:[
             {
                 test: /\.ts$/,
-                loader: 'awesome-typescript-loader',
-                query:{
-                    useCache: false
-                }
+                use: [
+                { 
+                    loader: 'awesome-typescript-loader', 
+                    options :{
+                        useCache: false
+                    } 
+                }]
             }
         ]
     },
