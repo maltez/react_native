@@ -1,8 +1,7 @@
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: path.join(__dirname, 'src/app.js'),
+    entry: path.join(__dirname, 'src/helloWorld.js'),
 
     output: {
         filename: 'bundle.js',
@@ -14,17 +13,16 @@ module.exports = {
         rules:[
             {
                 test:/\.js$/,
-                exclude: ['node_modues', 'build'],
+                exclude: ['node_modules', 'build'],
                 use: [
-                { loader: 'babel-loader' }
-            ]
+                    { loader: 'babel-loader' },
+                ]
             }
         ]
     },
     watch: true,
     devServer: {
         contentBase: path.join(__dirname, 'public'),
-        //publicPath: path.join(__dirname, 'public'),
         compress: true,
         port: 3000,
         hot: true
