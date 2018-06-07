@@ -1,23 +1,26 @@
 // Create private member in class using WeakMap.
 
-class Private {
-    constructor() {
-        this._map = new WeakMap();
+const Private = (function() {
+
+    let map = new WeakMap();
+
+    class Private {
+        get _private() {
+            return map.get(this);
+        }
+
+        set _private(value) {
+            map.set(this, value);
+        }
+
+        test() {
+            this._private = "Private member!";
+            console.log(this._private);
+        }
     }
 
-    get _private() {
-        return this._map.get(this);
-    }
-
-    set _private(value) {
-        this._map.set(this, value);
-    }
-
-    test() {
-        this._private = "Private member!";
-        console.log(this._private);
-    }
-}
+    return Private;
+})();
 
 const private = new Private();
 private.test();
