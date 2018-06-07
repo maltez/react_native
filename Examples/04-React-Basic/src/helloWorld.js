@@ -1,8 +1,20 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { render } from 'react-dom';
 
-const header = React.createElement('h1', {}, 'Hello REACT again!');
-const input = React.createElement('input', {type: 'text', value:'Default'});
-const element = React.createElement('div', {}, [header, input]);
+const timeZones = ['east', 'west','south', 'north']
 
-ReactDom.render(element, document.getElementById('app'));
+const getDate = () => {
+    
+};
+
+const fnComponent = () => {
+    const element = (
+    <ul>
+        <h1>Time zones</h1>
+        {timeZones.map(function(el)  {return <li>{el}</li>}) }
+    </ul>)
+
+    render(element, document.getElementById('app'));
+}
+
+setInterval(fnComponent, 1000);
