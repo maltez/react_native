@@ -19,3 +19,14 @@
 - Create site used jQuery.Site one form with jQuery validation(email, phone number).
 - Site should be bundled by webpack. You have to set version (increment) of bundle. Include all scripts not by the hands. All scripts should by minifiing and uglify. Sours maps should be included.
 - Join css, babel, react and jsx loaders in one project. Add React hello world application in this project. Configurable webpack-dev-server for this project. Include bundle.js file in this project automatically. With plugin(with hash).
+
+# Homework 6
+- Create calendar for next month.
+- Under calendar should be shown current time.
+
+# Homework 7
+- Create comments component.
+- Component contains input field.
+- Component contains submit button.
+- In the top component has comment list.
+- Apply pretty styles :)
