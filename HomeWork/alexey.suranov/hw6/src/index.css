@@ -1,0 +1,26 @@
+.titles{
+  display: inline-block;
+  height: 1px;
+}
+.day-name{
+  display: inline;
+  list-style: none;
+  margin: 0 5px;
+} 
+.week-holder{
+  float: left;
+  width: 100%;
+  margin: 5px 0;
+}
+.week{
+  display: inline;
+  list-style: none;
+}
+.day{
+    width: 35px;
+    float: left;
+    text-align: center;
+}
+.month{
+
+}
