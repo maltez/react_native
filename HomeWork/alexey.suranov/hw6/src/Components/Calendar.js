@@ -14,7 +14,7 @@ export default class Calendar extends Component {
 
         return (
             <div className="App">
-                <h1>Calendar: {monthNames[m]}</h1>
+                <h1>Calendar:   next month is - {monthNames[m+1]}</h1>
                 <Month daysInMonth={daysInMonth} monthIndex={m} />
             </div>
         );
