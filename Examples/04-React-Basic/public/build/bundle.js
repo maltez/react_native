@@ -97,15 +97,34 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(10);
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var header = _react2.default.createElement('h1', {}, 'Hello REACT again!');
-var input = _react2.default.createElement('input', { type: 'text', value: 'Default' });
-var element = _react2.default.createElement('div', {}, [header, input]);
+var timeZones = ['east', 'west', 'south', 'north'];
 
-_reactDom2.default.render(element, document.getElementById('app'));
+var getDate = function getDate() {};
+
+var fnComponent = function fnComponent() {
+    var element = _react2.default.createElement(
+        'ul',
+        null,
+        _react2.default.createElement(
+            'h1',
+            null,
+            'Time zones'
+        ),
+        timeZones.map(function (el) {
+            return _react2.default.createElement(
+                'li',
+                null,
+                el
+            );
+        })
+    );
+
+    (0, _reactDom.render)(element, document.getElementById('app'));
+};
+
+setInterval(fnComponent, 1000);
 
 /***/ }),
 /* 1 */
