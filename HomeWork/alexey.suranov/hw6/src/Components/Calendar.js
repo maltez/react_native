@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Month from './Month';
+import Clock from './Clock';
+
 export default class Calendar extends Component {
 
     render() {
@@ -10,12 +12,14 @@ export default class Calendar extends Component {
             d = TodayDate.getDay(),
             m = TodayDate.getMonth(),
             y = TodayDate.getFullYear(),
+            firstMonthDay = new Date(y, m, 1).getDay(),
             daysInMonth = new Date(y, m, 0).getDate();
 
         return (
             <div className="App">
-                <h1>Calendar:   next month is - {monthNames[m+1]}</h1>
-                <Month daysInMonth={daysInMonth} monthIndex={m} />
+                <h2>Calendar: {monthNames[m]}</h2>
+                <Month daysInMonth={daysInMonth} monthIndex={m} firstMonthDay={firstMonthDay}/>
+                {/* <Clock /> */}
             </div>
         );
     }
