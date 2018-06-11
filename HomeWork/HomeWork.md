@@ -30,3 +30,6 @@
 - Component contains submit button.
 - In the top component has comment list.
 - Apply pretty styles :)
+
+# Homework 8
+- TODO list (3 components)
