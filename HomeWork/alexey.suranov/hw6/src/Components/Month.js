@@ -8,23 +8,37 @@ export default class Month extends Component {
         super(props);
     }
 
-    weeksHolder () {
-        let weeks = [];
-            
-        for (let i = 0; i < 6; i++) {
-            weeks.push(
-                <Week  
-                    daysInMonth={this.props.daysInMonth} 
-                    key={i} 
-                    firstMonthDay={this.props.firstMonthDay}
-                    weekIndex={i}
-            />);
+    prepareMonth() {
+        let firstDate = this.props.firstMonthDay,
+            daysInMonth = this.props.daysInMonth,
+            weeks = [],
+            week = [],
+            output = [];
+
+        for (let i = 0; i < firstDate; i++) {
+            week.push('');
         }
-        return weeks;
+
+        for (let i = 1; i <= daysInMonth; ++i) {
+            week.push(i);
+            if (week.length % 7 == 0 || i == daysInMonth) {
+                weeks.push(week);
+                week = [];
+            }
+        }
+
+        weeks.map((item, i) => {
+            output.push(<Week
+                monthIndex={this.props.monthIndex}
+                week={item}
+                key={i}
+            />)
+        })
+        return output;
     }
 
     render() {
-        const titles = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'San'];
+        const titles = ['San', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
         return (
             <div className="App">
@@ -36,7 +50,7 @@ export default class Month extends Component {
                     }
                 </ul>
                 <div className="week-holder">
-                    {this.weeksHolder()}
+                    {this.prepareMonth()}
                 </div>
             </div>
         );

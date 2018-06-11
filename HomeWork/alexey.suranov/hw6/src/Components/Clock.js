@@ -26,7 +26,7 @@ export default class Clock extends Component {
             
         return (
             <div>
-                <h3>{h % 12}:{(m < 10 ? '0' + m : m)}:{(s < 10 ? '0' + s : s)} {h < 12 ? 'am' : 'pm'}</h3>
+                <h3>Current time: {h % 12}:{(m < 10 ? '0' + m : m)}:{(s < 10 ? '0' + s : s)} {h < 12 ? 'am' : 'pm'}</h3>
             </div>
         )
 
