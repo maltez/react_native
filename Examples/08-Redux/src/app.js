@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
-import { Increment } from './increment';
-import { Decrement } from './decrement';
-import { Show } from './show';
-import store from './store';
+import { Increment } from './components/increment/increment';
+import { Decrement } from './components/decrement/decrement';
+import Show from './components/show/show';
+import store from './store/store';
 
 
 export class App extends Component {
     constructor(props){
         super(props);
-        this.state = {count: 0};
+        this.state = store.getState();
     }
 
     componentDidMount(){
         store.subscribe(
             () => {
-                this.setState({count: store.getState()});
+                this.setState(store.getState());
             }
         );
     }
+
     render() {
         return (
             <div>
-                <h1>Redux</h1>
-                <Increment />
+                <Increment caption="Increment" disable={this.state.disable}/>
                 <Show count={this.state.count}/>
-                <Decrement />
+                <Decrement caption="Decrement" disable={this.state.disable}/>
             </div>);
     }
 }
