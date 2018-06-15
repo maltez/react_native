@@ -1,0 +1,60 @@
+.mainContainer{
+    width: 100%;
+    text-align: center;
+}
+.filters{
+    margin: 0 auto;
+
+    width: 350px;
+    border-radius:10px;
+    padding: 5px;
+}
+.filters a {
+    font-size: 18px;
+    margin: 0 10px;
+    background-color: rgb(195, 237, 248);
+    border-radius:10px;
+    padding: 5px;
+    width: 50px;
+    color: rgb(173, 143, 159);
+    text-decoration: none;
+    display: inline-block;
+}
+.filters a:hover {
+    background-color: rgb(159, 228, 245);
+    text-decoration: none;
+    display: inline-block;
+}
+.filters a:visited {
+    color: rgb(173, 143, 159);
+    text-decoration: none;
+    display: inline-block;
+}
+.ItemsContainer{
+    margin:0 auto;
+    padding: 15px;
+    background-color: rgb(250, 238, 207);
+    width: 500px;
+    min-height: 300px;
+    border-radius: 15px;
+}
+.submitFormContainer{
+    margin:10px auto;
+    padding: 15px;
+    background-color: rgb(152, 211, 226);
+    width: 500px;
+    border-radius: 15px;
+}
+.elementForm{
+    margin-right: 10px;
+}
+.todoList{
+    margin: 10px auto;
+    list-style-type:none;
+    text-align: left;
+    width: 50%;
+}
+.checkboxItem {
+
+    margin-right: 15px
+}
