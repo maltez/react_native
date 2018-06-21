@@ -36,3 +36,10 @@
 
 # Homework 9
 - Todo list with filtering(based on react router)
+
+# Homework 10
+- Refactor todo list using redux
+- All items store in the store
+- New - this is last added item
+- Filtering from redux.
+- All items get from redux.
