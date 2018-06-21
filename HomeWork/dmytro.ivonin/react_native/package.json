@@ -1,0 +1,15 @@
+{
+  "name": "react_native",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create": "create-react-native-app hw11"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-native-app": "^1.0.0"
+  }
+}
