@@ -1,0 +1,38 @@
+.Submit-button {
+  background-color:blue;
+  height: 30px;
+  width: 100px;
+  margin-top: 50px; 
+  color: white;
+  border: 2px solid blue;
+  border-color: rgb(252, 0, 21);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.Input-text {
+  height: 22px;
+  width: 150px;
+  margin: 5px;
+  border: 3px solid blue;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.Input-title-style {
+  font-size: 1.3em;
+  color: blue;
+  font-family: Tahoma;
+}
+
+.App-title {
+  font-size: 2em;
+  color: blue;
+}
+
+.comment-list-item-title {
+  font-size: 1.3em;
+  font-family: Tahoma;
+  margin: 10px;
+}
+
