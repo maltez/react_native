@@ -1,0 +1,14 @@
+{
+  "name": "10-react-native",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create": "create-react-native-app AwesomeProject"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-native-app": "^1.0.0"
+  }
+}
