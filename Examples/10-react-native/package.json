@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "create": "create-react-native-app AwesomeProject"
+    "create": "create-react-native-app NewProject"
   },
   "author": "",
   "license": "ISC",

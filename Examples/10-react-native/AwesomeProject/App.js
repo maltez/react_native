@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
+import NewComponent from './newComponent/newComponent';
+import { PrettyComponent } from './PrettyComponent/prettyComponent';
 
-export default class App extends React.Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {text: 'Useless Multiline Placeholder'};
@@ -9,10 +11,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hey react native</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-        <TextInput value={this.state.text}/>
+        <Text>Hello world React Native is comming</Text>
+        <NewComponent text="This is new component" />
+        <PrettyComponent />
       </View>
     );
   }
