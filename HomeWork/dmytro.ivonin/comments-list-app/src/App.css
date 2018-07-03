@@ -1,0 +1,25 @@
+.App {
+  text-align: left;
+  margin: 25px;
+}
+
+.App-header {
+  background-color: rgb(180, 182, 161);
+  height: 50px;
+  padding: 20px;
+  color: blue;
+  margin-bottom: 25px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.Input {
+  width: 300px;
+  margin-top: 25px;
+}
