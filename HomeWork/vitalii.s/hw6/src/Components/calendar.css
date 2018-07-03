@@ -1,0 +1,36 @@
+.mainContainer {
+    width: 450px;
+    margin: 0 auto;
+}
+.name {
+    color: blue;
+    padding: 25px
+}
+.day {
+    color: black;
+    width: 35px;
+    display: inline-block;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    padding: 5px;
+}
+
+.week {
+    color: black;
+}
+.weeks {
+    color: black;
+
+}
+.week-holder{
+    margin: 5px 0 5px 20px
+}
+.week{
+    display:inline-block
+}
+ul.week-holder:last-child{
+    float: left;
+}
+.currentDate{
+    clear: both;
+}
