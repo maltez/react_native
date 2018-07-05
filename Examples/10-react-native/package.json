@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "create": "create-react-native-app NewProject"
+    "create": "create-react-native-app ReduxProj"
   },
   "author": "",
   "license": "ISC",
