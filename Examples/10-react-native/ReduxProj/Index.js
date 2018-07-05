@@ -13,19 +13,27 @@ import {
 } from "./store/actions/index";
 
 class App extends Component {
-  placeAddedHandler = placeName => {
+  constructor(props) {
+    super(props);
+
+    this.placeAddedHandler = this.placeAddedHandler.bind(this);
+    this.placeDeletedHandler = this.placeDeletedHandler.bind(this);
+    this.modalClosedHandler = this.modalClosedHandler.bind(this);
+  }
+
+  placeAddedHandler(placeName) {
     this.props.onAddPlace(placeName);
   };
 
-  placeDeletedHandler = () => {
+  placeDeletedHandler() {
     this.props.onDeletePlace();
   };
 
-  modalClosedHandler = () => {
+  modalClosedHandler(){
     this.props.onDeselectPlace();
   };
 
-  placeSelectedHandler = key => {
+  placeSelectedHandler(key){
     this.props.onSelectPlace(key);
   };
 
