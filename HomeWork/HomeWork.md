@@ -62,3 +62,8 @@
 
 # Homework 14
 - Create funny chess table(use diff collors and use flex)
+
+# Homework 15
+- Add posibility select and delete multiple places.
+- Make image place dynamic.
+
