@@ -43,3 +43,22 @@
 - New - this is last added item
 - Filtering from redux.
 - All items get from redux.
+
+# Homework 11.
+- Add new component - component has 10 avatars, component retrieve email object: text, title, sender, from
+- Component should be shown sender picture and should be show e-meil fields
+
+# Homework 12
+- Create POS termial(reacr native)
+- You have area with order
+- You have area with new order text
+- You have button add
+- You need be available add new orders
+- Style it!
+
+# Homework 13
+- Create color test card (cntains 7 colors from Red to Violet from left to right)
+- Use flex
+
+# Homework 14
+- Create funny chess table(use diff collors and use flex)
