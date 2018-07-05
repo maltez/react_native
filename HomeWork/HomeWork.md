@@ -43,3 +43,23 @@
 - New - this is last added item
 - Filtering from redux.
 - All items get from redux.
+
+# Homwork 11
+- Create Advances email card (User e-mail, avatar, from, to, message body)
+- Style it with styles
+- fetch data from3rd party API
+
+# Homework 12
+- Create POS termial(reacr native)
+- You have area with order
+- You have area with new order text
+- You have button add
+- You need be available add new orders
+- Style it!
+
+# Homework 13
+- Create color test card (cntains 7 colors from Red to Violet from left to right)
+- Use flex
+
+# Homework 14
+- Create funny chess table(use diff collors and use flex)
