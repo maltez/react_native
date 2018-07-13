@@ -1,0 +1,17 @@
+.App {
+  background: #ecf0f1;
+  padding: 48pt;
+  text-align: start;
+}
+
+.App-title {
+  color: #34495e;
+}
+
+.App-listItem {
+  color: #7f8c8d;
+}
+
+.App-button {
+  margin: 8pt;
+}
