@@ -1,12 +1,5 @@
 import React from "react";
-import store from "../store/store";
-
-const changeFilter = filter => {
-    store.dispatch({
-        type: "FILTER_TODO",
-        filter
-    });
-};
+import { changeFilter } from "../store/actions";
 
 const Filters = () => {
     return (

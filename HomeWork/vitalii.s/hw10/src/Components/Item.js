@@ -1,19 +1,5 @@
 import React from "react";
-import store from "../store/store";
-
-const done = id => {
-    store.dispatch({
-        type: "DONE_TODO",
-        id
-    });
-};
-
-const remove = id => {
-    store.dispatch({
-        type: "REMOVE_TODO",
-        id
-    });
-};
+import { done, remove } from "../store/actions";
 
 const Item = props => {
     return (

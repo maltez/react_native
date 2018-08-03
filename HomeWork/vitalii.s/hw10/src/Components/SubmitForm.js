@@ -1,18 +1,5 @@
 import React, { Component } from "react";
-import id from "shortid";
-
-import store from "../store/store";
-
-const addNewToDo = value => {
-    store.dispatch({
-        type: "ADD_TODO",
-        payload: {
-            id: id.generate(),
-            done: false,
-            value
-        }
-    });
-};
+import { addNewToDo} from "../store/actions";
 
 export default class SubmitForm extends Component {
     constructor(props) {
